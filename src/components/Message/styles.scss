@@ -1,0 +1,58 @@
+@use "@styles/_variables" as *;
+
+.message {
+  margin-right: 12px;
+  margin-left: 36px;
+
+  @include media-up('sm') {
+    margin-right: 0;
+  }
+
+  @include media-up('md') {
+    margin-left: 48px;
+  }
+
+  @include media-up('lg') {
+    margin-left: 59px;
+  }
+}
+
+.message__body {
+  @include message-bubble;
+  margin-bottom: 6px;
+  padding: 6px 12px;
+  color: $color-text;
+  font-size: get-map-value($font-sizes, 'default');
+  line-height: 1.28;
+  word-wrap: break-word;
+  text-size-adjust: 100%;
+
+  @include media-up('sm') {
+    max-width: 80%;
+    padding: 8px 16px;
+    font-size: get-map-value($font-sizes, 'md');
+  }
+
+  @include media-up('md') {
+    max-width: 75%;
+  }
+
+  @include media-up('lg') {
+    margin-bottom: 8px;
+    padding: 10px 20px;
+    font-size: get-map-value($font-sizes, 'lg');
+  }
+
+  &--first {
+    border-bottom-left-radius: 4px;
+  }
+
+  &--middle {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  &--last {
+    border-top-left-radius: 4px;
+  }
+}

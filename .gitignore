@@ -1,0 +1,28 @@
+# Logs
+*.log*
+
+# Dependencies and builds
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.sw?
+
+# Environment files
+.env*
+
+# Testing and coverage
+coverage
+
+# Cache and build artifacts
+.eslintcache
+*.tsbuildinfo
+.firebase

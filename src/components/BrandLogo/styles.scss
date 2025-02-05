@@ -1,0 +1,19 @@
+@use "@styles/_variables" as *;
+
+.brand-logo {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 0.25em;
+  vertical-align: text-bottom;
+
+  @media (min-width: 768px) {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 18px;
+    height: 18px;
+  }
+}
