@@ -9,7 +9,16 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [tsconfigPaths(), preact()],
-  logLevel: 'error',
+  logLevel: 'info',
+  server: {
+    port: 5173,
+    strictPort: false,
+    host: true,
+    open: false,
+    hmr: {
+      overlay: true,
+    },
+  },
   build: {
     target: 'esnext',
     minify: 'terser',
@@ -22,7 +31,7 @@ export default defineConfig({
           webfontloader: ['webfontloader'],
         },
       },
-    }
+    },
   },
   css: {
     devSourcemap: true,
@@ -32,8 +41,8 @@ export default defineConfig({
         additionalData: '@use "@styles/_variables" as *;',
         sassOptions: {
           outputStyle: 'compressed',
-          quietDeps: true
-        }
+          quietDeps: true,
+        },
       },
     },
   },
@@ -41,7 +50,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, './src'),
       '@components': resolve(__dirname, './src/components'),
-      '@styles': resolve(__dirname, './src/styles')
-    }
-  }
+      '@styles': resolve(__dirname, './src/styles'),
+    },
+  },
 });
