@@ -1,7 +1,7 @@
 {
   "name": "my-page",
   "private": true,
-  "version": "2.0.2",
+  "version": "3.0.0",
   "type": "module",
   "homepage": "",
   "scripts": {

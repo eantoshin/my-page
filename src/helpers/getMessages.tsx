@@ -23,8 +23,8 @@ const getMessages = (currentDate: Date): IMessage[] => [
     id: 2,
     render: () => (
       <>
-        В команде<CustomLink to={links.unit6}>UNIT6</CustomLink>я занимаюсь созданием frontend части
-        российских и международных FinTech проектов на React и сопутствующих технологиях.
+        В команде<CustomLink to={links.beeline}>beeline</CustomLink>я занимаюсь созданием frontend части
+        внутреннего сервиса Финансовой информации на React и сопутствующих технологиях.
       </>
     ),
   },
